@@ -149,3 +149,79 @@ Pasadas 24h podemos observar como los usuarios se han asignado automáticamente 
 ```
 az104-01a-aduser1 aparecer en IT Cloud Administrator
 ```
+
+![](img/img13.png)
+
+*az104-01a-aaduser2 ha de aparecer en IT System Administrator*
+
+![](img/img14.png)
+
+### Tarea 3: Crear un Azure Active Directory (AD) tenant.
+
+------
+
+1. En Azure Portal, buscamos y seleccionamos **Azure Active Directory** .
+2. Hacemos clic en **Manage tenants** .
+
+![](C:\Repositorios\AzureLab01\img\img15.png)
+
+| Setting        | Value                  |
+| -------------- | ---------------------- |
+| Directory Type | Azure Active Directory |
+
+Clicamos en next: configuracion y rellenamos con los siguientes datos
+
+| Setting             | Value                |
+| ------------------- | -------------------- |
+| Organization name   | Contoso Lab          |
+| Initial domain name | cualquier DNS valido |
+| Country/Region      | System Administrator |
+
+Revisamos y creamos
+
+Comprobamos que se ha creado y que podemos hacer *switch* entre los dos tenants:
+
+![](img/img16.png)
+
+
+
+### Tarea 4: Administrar usuarios invitados de Azure AD.
+
+------
+
+1. Accedemos a nuestro nuevo tenant (**Costoso Lab**) al cual podemos acceder dandole al boton **Switch**.
+2. Navegamos a **Users - All users** y después hacemos clic en **+ New user** y creamos un nuevo usuario con los siguientes datos:
+
+| Setting                    | Value                         |
+| -------------------------- | ----------------------------- |
+| User name                  | **az104-01b-aaduser1**        |
+| Name                       | **az104-01b-aaduser1**        |
+| Let me create the password | enabled                       |
+| Initial password           | **Provide a secure password** |
+| Job title                  | **System Administrator**      |
+
+![](img/img17.png)
+
+Regresamos al tenant predeterminado y repetimos este ultimo paso, entramos al perfil y le añadimos afiliacion al grupo de IT Lab Administrator, la lista de usuarios quedaria tal que asi:
+
+1. Volvemos a la página **Users - All users** y después clicamos en **+ Invite external user**.
+
+2. Creamos un nuevo usuario invitado con los siguientes datos:
+
+   | Setting        | Value                                                   |
+   | -------------- | ------------------------------------------------------- |
+   | Name           | **az104-01b-aaduser1**                                  |
+   | Email address  | the User Principal Name you copied earlier in this task |
+   | Usage location | **United States**                                       |
+   | Job title      | **Lab Administrator**                                   |
+   | Department     | **IT**                                                  |
+
+3. Hacemos click en **Invite**.
+
+4. De vuelta en la hoja **Users - All users** , hacemos clic en el usuario que acabamos de crear.
+
+5. En el usuario **az104-01b-aaduser1 - Profile**, hacemos click en **Groups**.
+
+6. Clicamos en **+ Add membership** and añadimos nuestra cuenta de usuario invitado al grupo **IT Lab Administrators**.
+
+![](img/img18.png)
