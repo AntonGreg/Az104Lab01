@@ -9,6 +9,10 @@
 - **Tarea 3**: Crear un Azure Active Directory (AD) tenant.
 - **Tarea 4**: Administrar usuarios invitados de Azure AD.
 
+## **Diagrama**
+
+![](img/img20.png)
+
 ## Instrucciones
 
 ### Tarea 1: Crear y configurar usuarios de Azure AD.
